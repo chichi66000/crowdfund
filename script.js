@@ -151,7 +151,7 @@ end.addEventListener('click', () => {
         thankyou.classList.toggle('opacity-0');
         thankyou.classList.toggle('pointer-events-none');
         thankyou.classList.toggle('h-0');
-        thankyou.classList.toggle('h-auto');
+        // thankyou.classList.toggle('h-auto');
 
 
         main.classList.toggle('modal-active');
