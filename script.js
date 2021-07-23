@@ -100,19 +100,21 @@ for (let y = 0; y< backProj.length; y++) {
                 // for the reste of funding: get the input's value then send message thankyou
                 for (let i = 1; i< pay.length; i++) {
                         pay[i].addEventListener('change', () => {
-                                let value = pay[i].value;
+                                
 
                                 if (  pay[i].value >= pay[i].min ) {
                                         btnContinue[i].addEventListener('click', () => {
                                                 // take the input's value
                                                 // send this value to the server; at this moment we haven't yet the server, so just do the console.log the value
-                                                console.log("this input's value is " + value);
+                                                console.log("this input's value is " + pay[i].value);
                                                 // then send a message thankyou to inform user
                                                 send ();
 
                                         })
                                 }
-                                
+                                if (pay[i].value < pay[i].min) {
+                                        alert('Please enter a greater value')
+                                }
                         } )
                         
                 }
