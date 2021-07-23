@@ -133,7 +133,7 @@ for (let y = 0; y< backProj.length; y++) {
 let thankyou = document.getElementById('thankyou');
 
 function send () {
-        // openModal();
+        
         modal.classList.toggle('opacity-0');
         modal.classList.toggle('pointer-events-none');
         modal.classList.toggle('h-0');
@@ -142,7 +142,9 @@ function send () {
         thankyou.classList.toggle('opacity-0');
         thankyou.classList.toggle('pointer-events-none');
         thankyou.classList.toggle('h-0');
-        thankyou.classList.toggle('h-auto');
+        // thankyou.classList.toggle('h-auto');
+
+        
 }
 
 // close modal message succes when cliking the button "Got it" 
@@ -157,7 +159,7 @@ end.addEventListener('click', () => {
         main.classList.toggle('modal-active');
         main.classList.toggle('opacity-50');
         main.classList.toggle('bg-gray-200');
-        
+
 })
 
 
