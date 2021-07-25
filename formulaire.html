@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type= "text/css" href="tailwind.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Contact</title>
+</head>
+<body>
+    <!-- menu navbar -->
+    <nav class="mb-5 mx-auto">
+
+        <picture class="absolute w-full">
+          <source class="w-full" media="(max-width: 767px)" srcset="./images/image-hero-mobile.jpg">
+          <source class="w-full" media="(min-width: 768px)" srcset="./images/image-hero-desktop.jpg">
+          <img class="w-full" src="./images/image-hero-desktop.jpg" alt="Mastercraft Bamboo Monitor Riser">
+        </picture>
+        
+        
+        <div class="relative flex flex-wrap px-5 py-5">
+            <img class="inline-flex object-contain item-center px-5" src="./images/logo.svg" alt="logo"/>
+  
+            <button id="toggle" class="inline-flex item-center hover:bg-gray-200 rounded md:hidden ml-auto p-2" data-target="navigation">
+              <img src="./images/icon-hamburger.svg" alt="icon menu"/>
+  
+            </button>
+  
+            <div class="topNav w-full lg:inline-flex md:flex-grow md:w-auto mt-5 md:mt-0 justify-end" id="navigation">
+  
+              <div class="md:bg-transparent  md:text-white text-right bg-gray-200 text-black rounded text-xs sm:text-sm">
+                  <ul class="md:inline-flex md:flex-row md:ml-auto flex flex-col">
+                      <li>
+                            <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                            <span>About</span>
+                            </a>
+                        </li>
+                      <li>
+                            <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                            <span>Discovery</span>
+                            </a>
+                      </li>
+                      <li>
+                            <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                            <span>Get Started</span>
+                            </a>
+                      </li>
+                  </ul>
+                  
+                  
+                  
+              </div>
+              
+            </div>
+  
+        </div>
+        
+    </nav>
+
+      <!-- formulaire de contact -->
+    <div class="mx-auto formulaire relative  w-11/12 md:w-3/4 lg:w-1/2 ">
+
+        <h1 class="text-center mx-auto text-lg p-2 font-bold">Please enter your information</h1>
+
+        <form class=" border-2 border-gray-50 rounded-md bg-white p-1 mb-2 text-center">
+
+            <!-- Name -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="cyen block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    Full Name <span class="text-red-600">*</span>
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input class="bg-gray-200 appearance-none border-2 border-cyen  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200" id="inline-full-name" type="text" placeholder="Jane Doe" required>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="cyen block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="email">
+                    Email <span class="text-red-600">*</span>
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input class="bg-gray-200 appearance-none border-2 border-cyen  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200" id="email" type="text" placeholder="JaneDoe@gmail.com" required>
+                </div>
+            </div>
+
+            <!-- address -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="cyen block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="address">
+                    Address <span class="text-red-600">*</span>
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input class="bg-gray-200 appearance-none border-2 border-cyen  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200" id="address" type="text" placeholder="5 Square Birkingham London" required>
+                </div>
+            </div>
+
+            <!-- Telephone -->
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                  <label class="cyen block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="tel">
+                    Telephone <span class="text-red-600">*</span>
+                  </label>
+                </div>
+                <div class="md:w-2/3">
+                  <input class="bg-gray-200 appearance-none border-2 border-cyen  rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-200" id="tel" type="text" placeholder="0652695896" required>
+                </div>
+            </div>
+
+            <!-- button send -->
+            <div class="text-center">
+
+                <button class="my-2 p-2 bg-cyen mx-auto rounded text-center">Send</button>
+            </div>
+        </form>
+      </div>
+</body>
+</html>
