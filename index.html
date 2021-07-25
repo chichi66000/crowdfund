@@ -17,12 +17,12 @@
   <section id="main" class="">
 
     <!-- Navbar -->
-    <nav class="mb-5">
+    <nav class="mb-5 mx-auto">
 
       <picture class="absolute w-full">
-        <source media="(max-width: 767px)" srcset="./images/image-hero-mobile.jpg">
-        <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.jpg">
-        <img src="./images/image-hero-desktop.jpg" alt="Mastercraft Bamboo Monitor Riser">
+        <source class="w-full" media="(max-width: 767px)" srcset="./images/image-hero-mobile.jpg">
+        <source class="w-full" media="(min-width: 768px)" srcset="./images/image-hero-desktop.jpg">
+        <img class="w-full" src="./images/image-hero-desktop.jpg" alt="Mastercraft Bamboo Monitor Riser">
       </picture>
       
       
@@ -34,25 +34,36 @@
 
           </button>
 
-          <div class="topNav w-full lg:inline-flex md:flex-grow md:w-auto" id="navigation">
+          <div class="topNav w-full lg:inline-flex md:flex-grow md:w-auto mt-5 md:mt-0 justify-end" id="navigation">
 
-            <div class="md:bg-transparent md:inline-flex md:flex-row md:ml-auto flex flex-col md:text-white text-right bg-white text-black rounded">
-                <a class="md:inline-flex md:w-auto md:px-5" href="#">
-                  <span>About</span>
-                </a>
-                <a class="md:inline-flex md:w-auto md:px-5" href="#">
-                  <span>Discovery</span>
-                </a>
-                <a class="md:inline-flex md:w-auto md:px-5" href="#">
-                  <span>Get Started</span>
-                </a>
+            <div class="md:bg-transparent  md:text-white text-right bg-gray-200 text-black rounded text-xs sm:text-sm">
+                <ul class="md:inline-flex md:flex-row md:ml-auto flex flex-col">
+                    <li>
+                          <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                          <span>About</span>
+                          </a>
+                      </li>
+                    <li>
+                          <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                          <span>Discovery</span>
+                          </a>
+                    </li>
+                    <li>
+                          <a class="px-1 py-1 md:py-0 md:inline-flex md:w-auto md:px-5" href="#">
+                          <span>Get Started</span>
+                          </a>
+                    </li>
+                </ul>
+                
+                
+                
             </div>
             
           </div>
 
       </div>
       
-    </nav>
+  </nav>
 
     <!-- Contenu -->
     <div class="mx-auto w-11/12 md:w-3/4 lg:w-1/2 ">

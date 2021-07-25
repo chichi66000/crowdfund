@@ -20,7 +20,7 @@ a:focus {
 }
 
 #navigation {
-    margin-top: 20px;
+    /* margin-top: 20px; */
   overflow: hidden;
   max-height: 1800px;
   -webkit-transition: max-height 0.3s; 
@@ -73,17 +73,20 @@ button:focus {
 .radio {
     appearance: radio;
 }
+
+/* style formulaire */
+
 @media screen and (min-width: 1200px) {
     .contenu {
         margin-top: 10% !important;
     }
+    .formulaire {
+        top: 15rem !important;
+    }
 }
 
-@media screen and (min-width: 992px) {
-    /* .bar {
-        width: 50% !important;
-        
-    } */
+@media screen and (min-width: 992px) and (max-width: 768px) {
+   
 }
 @media screen and (min-width: 768px) {
     .topNav {
@@ -96,17 +99,27 @@ button:focus {
     .contenu {
         margin-top: 5% !important;
     }
+    .formulaire {
+        top: 10rem;
+    }
 }
+
 
 @media screen and (max-width: 767px) {
     .contenu {
         margin-top: 45% !important;
+    }
+    .formulaire {
+        top: 16rem;
     }
 }
 
 @media screen and (max-width: 500px) {
     .contenu {
         margin-top: 35% !important;
+    }
+    .formulaire {
+        top: 8rem;
     }
 }
 
@@ -127,6 +140,9 @@ button:focus {
          padding: 0.25rem;
         
     } 
+    .formulaire {
+        top: 5rem;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -147,6 +163,9 @@ button:focus {
         margin-top: 1rem;
         width: 98%;
     } 
+    .formulaire {
+        top: 3rem;
+    }
 }
 
 
