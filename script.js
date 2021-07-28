@@ -83,14 +83,14 @@ let left3 = document.querySelectorAll('.left3');
 for (let y = 0; y< backProj.length; y++) {
         // change the style of the div with event mouseenter
         let product = {};
-        backProj[y].addEventListener('mouseenter', () => {
+        backProj[y].addEventListener('mouseenter',  () => {
                 radio[y].checked = true;
                 confirm[y].classList.remove('hidden');
                 backProj[y].classList.toggle('border-gray-50');
                 backProj[y].classList.toggle('border-cyen'); 
 
                 // for the first funding without money, just send the message thankyou
-                btnContinue[0].addEventListener('click', () => {
+                btnContinue[0].addEventListener('click',  () => {
                         if (radio[0].checked) {
                                 console.log("this input 0 value is " + pay[0].value);
                                 // add the choice to localstorage
@@ -99,11 +99,8 @@ for (let y = 0; y< backProj.length; y++) {
                                         price: 0
                                 }
                                 localStorage.setItem("product", JSON.stringify(product))
-                                // go to th page contact
+                                // go to the page contact
                                 window.location.href = "formulaire.html";
-                                // close the modal
-                                // openModal()
-                                
                         }
                         else { alert('Please select an option')}               
                 })
@@ -165,24 +162,6 @@ for (let y = 0; y< backProj.length; y++) {
 }
 
 
-
-
-// function send () {
-        
-//         modal.classList.toggle('opacity-0');
-//         modal.classList.toggle('pointer-events-none');
-//         modal.classList.toggle('h-0');
-
-//       // we will add the class to show the modal, and active the cursor
-//         thankyou.classList.toggle('opacity-0');
-//         thankyou.classList.toggle('pointer-events-none');
-//         thankyou.classList.toggle('h-0');
-//         // thankyou.classList.toggle('h-auto');
-
-        
-// }
-
-
 // verify if there is a parametre of confirm=true?
 let url = window.location.href;
 console.log("url " + url);
@@ -203,6 +182,10 @@ if (params == "?confirm=true") {
         thankyou.classList.toggle('opacity-0');
         thankyou.classList.toggle('pointer-events-none');
         thankyou.classList.toggle('h-0');
+        thankyou.classList.add('h-80');
+        thankyou.classList.add('sm:h-60');
+        thankyou.classList.add('md:h-60');
+
 }
 
 // close modal message succes when cliking the button "Got it" 
@@ -211,7 +194,9 @@ end.addEventListener('click', () => {
         thankyou.classList.toggle('opacity-0');
         thankyou.classList.toggle('pointer-events-none');
         thankyou.classList.toggle('h-0');
-        // thankyou.classList.toggle('h-auto');
+        thankyou.classList.remove('h-80');
+        thankyou.classList.remove('sm:h-60');
+        thankyou.classList.remove('md:h-60');
 
 
         main.classList.toggle('modal-active');
@@ -223,4 +208,4 @@ end.addEventListener('click', () => {
 // 5) Bookmark this page
 // no longer supported by the navigator
 
-// 6) Formulaire
+

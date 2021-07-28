@@ -123,6 +123,12 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 384px) {
+    #thankyou {
+        height: 25rem !important;
+    }
+}
+
 @media screen and (max-width: 368px) {
     .bg-cyen {
         
@@ -146,6 +152,9 @@ button:focus {
 }
 
 @media screen and (max-width: 320px) {
+    #thankyou {
+        height: 30rem !important;
+    }
     .contenu {
         margin-top: 10% !important;
     }

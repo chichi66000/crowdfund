@@ -1,5 +1,4 @@
-let message = document.getElementById('thankyou');
-let main1 = document.getElementById('main');
+
 
 let formumaire = document.getElementById('formulaire');
 formulaire.addEventListener ('submit', function valider (e) {
@@ -11,7 +10,7 @@ formulaire.addEventListener ('submit', function valider (e) {
     let email = document.getElementById ('email');
     let address = document.getElementById ('address');
 
-    // validation the informations
+    // validation the informations with regex
     let tel_validation = /[0-9]{10}/;   // tel with 10 numbers;
     let email_validation = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;     // format of email
     let name_validation =/^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/i                                   //  format name without number
@@ -68,25 +67,11 @@ formulaire.addEventListener ('submit', function valider (e) {
         //     }catch(error){ alert('erreur' + error)}
         // })
 
-        // give a thankyou message and retour to home
+        //  retour to home and give a thankyou message
         window.location.href = 'index.html?confirm=true';
+        // effacer localStorage
+        localStorage.removeItem('product')
 
-        // send a message to user => show the div of message thankyou
-        // send()
         
-
-        // function send () {
-        //     console.log("message");
-        //     main1.classList.toggle('opacity-50');
-        //     main1.classList.toggle('bg-gray-200');
-
-        //     // we will add the class to show the modal, and active the cursor
-        //     thankyou.classList.toggle('opacity-0');
-        //     thankyou.classList.toggle('pointer-events-none');
-        //     thankyou.classList.toggle('h-0');
-        //         // thankyou.classList.toggle('h-auto');
-
-                
-        // }
     }
 })
