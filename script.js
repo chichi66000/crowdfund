@@ -1,3 +1,4 @@
+
 /* 1) Open the navbar with the click on icon hamburger*/
 let navToogle = document.getElementById('toggle')
 let target = document.getElementById('navigation');
@@ -20,7 +21,7 @@ let backProject = document.querySelectorAll('.backProject');
 
 // select the section "main" and the section modal
 const main = document.getElementById('main');
-const modal = document.getElementById('modal')
+const modal = document.getElementById('modal');
 
 // add the event to the click for every button to backProject
 for ( let i=0; i< backProject.length; i++ ) {
@@ -81,7 +82,7 @@ let left3 = document.querySelectorAll('.left3');
 // change the style of the div with event mouseenter
 for (let y = 0; y< backProj.length; y++) {
         // change the style of the div with event mouseenter
-
+        let product = {};
         backProj[y].addEventListener('mouseenter', () => {
                 radio[y].checked = true;
                 confirm[y].classList.remove('hidden');
@@ -92,7 +93,17 @@ for (let y = 0; y< backProj.length; y++) {
                 btnContinue[0].addEventListener('click', () => {
                         if (radio[0].checked) {
                                 console.log("this input 0 value is " + pay[0].value);
-                                send()
+                                // add the choice to localstorage
+                                product = {
+                                        name: 'Mastercraft Bamboo',
+                                        price: 0
+                                }
+                                localStorage.setItem("product", JSON.stringify(product))
+                                // go to th page contact
+                                window.location.href = "formulaire.html";
+                                // close the modal
+                                // openModal()
+                                
                         }
                         else { alert('Please select an option')}               
                 })
@@ -101,14 +112,37 @@ for (let y = 0; y< backProj.length; y++) {
                 for (let i = 1; i< pay.length; i++) {
                         pay[i].addEventListener('change', () => {
                                 
-
                                 if (  pay[i].value >= pay[i].min ) {
                                         btnContinue[i].addEventListener('click', () => {
                                                 // take the input's value
                                                 // send this value to the server; at this moment we haven't yet the server, so just do the console.log the value
                                                 console.log("this input's value is " + pay[i].value);
-                                                // then send a message thankyou to inform user
-                                                send ();
+                                                
+                                                // add the choice to localstorage 
+                                                if (i==1) {
+                                                        product = {
+                                                                name: 'Bamboo Stand',
+                                                                price: pay[1].value
+                                                        }
+                                                }
+                                                if (i== 2) { 
+                                                        product = {
+                                                                name: 'Black Edition Stand',
+                                                                price: pay[2].value
+                                                        }
+                                                };
+                                                if (i== 3) { 
+                                                        product = {
+                                                                name: 'Mahogany Special Edition',
+                                                                price: pay[3].value
+                                                        }
+                                                }
+                                                localStorage.setItem('product',JSON.stringify(product) )
+                                                
+                                                // go to the page contact
+                                                window.location.href = "formulaire.html";
+                                                // close the modal
+                                                // openModal()
 
                                         })
                                 }
@@ -131,22 +165,44 @@ for (let y = 0; y< backProj.length; y++) {
 }
 
 
+
+
+// function send () {
+        
+//         modal.classList.toggle('opacity-0');
+//         modal.classList.toggle('pointer-events-none');
+//         modal.classList.toggle('h-0');
+
+//       // we will add the class to show the modal, and active the cursor
+//         thankyou.classList.toggle('opacity-0');
+//         thankyou.classList.toggle('pointer-events-none');
+//         thankyou.classList.toggle('h-0');
+//         // thankyou.classList.toggle('h-auto');
+
+        
+// }
+
+
+// verify if there is a parametre of confirm=true?
+let url = window.location.href;
+console.log("url " + url);
+let params = window.location.search;
+console.log("param "+ params);
+
 // send a message to user => show the div of message thankyou
 let thankyou = document.getElementById('thankyou');
 
-function send () {
+// if the formulaire is confirm => we wll show the messag thankyou to user
+if (params == "?confirm=true") {
         
-        modal.classList.toggle('opacity-0');
-        modal.classList.toggle('pointer-events-none');
-        modal.classList.toggle('h-0');
+        main.classList.toggle('modal-active');
+        main.classList.toggle('opacity-50');
+        main.classList.toggle('bg-gray-200');
 
       // we will add the class to show the modal, and active the cursor
         thankyou.classList.toggle('opacity-0');
         thankyou.classList.toggle('pointer-events-none');
         thankyou.classList.toggle('h-0');
-        // thankyou.classList.toggle('h-auto');
-
-        
 }
 
 // close modal message succes when cliking the button "Got it" 
@@ -161,9 +217,10 @@ end.addEventListener('click', () => {
         main.classList.toggle('modal-active');
         main.classList.toggle('opacity-50');
         main.classList.toggle('bg-gray-200');
-
 })
 
 
 // 5) Bookmark this page
 // no longer supported by the navigator
+
+// 6) Formulaire
